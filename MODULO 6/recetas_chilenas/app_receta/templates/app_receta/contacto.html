@@ -1,0 +1,28 @@
+{% extends 'base.html' %} <!--herencia de base.html-->
+
+{% block title %}Contacto | Recetas Chilenas{% endblock %} <!--titulo de pestaña-->
+
+{% block content %}
+<h2 class="text-center mb-4">Contáctanos</h2>
+
+<form method="POST" id="formContacto">  <!--crea formulario-->
+    <!--csrf evita error 403 y hay que acostumbrarse desde ya a usarlo-->
+    {% csrf_token %} 
+    <div class="mb-3">
+         <label for="nombre" class="form-label">Nombre:</label>
+         <input type="text" class="form-control" id="nombre" name="nombre">
+    </div>
+    <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje:</label>
+        <textarea class="form-control" id="mensaje" name="mensaje"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-dark mt-auto w-100">Enviar</button>
+</form>
+
+<!--advertencia-->
+<div id="advertencia" class="alert alert-danger d-none"></div>
+
+{% load static %}
+<script src="{% static 'js/validar.js' %}"></script>
+{% endblock %}

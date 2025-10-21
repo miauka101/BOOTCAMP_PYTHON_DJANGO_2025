@@ -1,0 +1,32 @@
+ {% extends 'base.html' %} <!--herencia de base.html-->
+{% block title %}Inicio | Recetas Chilenas{% endblock %} <!--nombre de la pestaña-->
+
+{% block content %} <!--inicio del bloque-->
+<div class="jumbotron bg-light p-5 rounded mb-4 text-center">
+    <h1 class="titulo-jumbotron">¡BIENVENID@ A RECETAS CHILENAS!</h1>
+    <p class="lead fw-bold">¡Las mejores recetas tradicionales de nuestra cocina!</p>
+</div>
+
+<div class="container">
+    <h2 class="text-center mb-4 receta-titulo">Recetas Disponibles</h2> 
+    <div class="row">
+        {% for receta in recetas %} <!--recorre lista de recetas-->
+        <!--tarjeta de receta-->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                {% if receta.imagen %}
+                <img src="{{ receta.imagen.url }}" class="img-fluid d-block mx-auto" alt="{{ receta.nombre }}">
+                {% endif %}
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ receta.nombre }}</h5> <!--titulo de la receta cuando te rediriges a la pagina receta-->
+                    <p class="card-text">{{ receta.descripcion}}</p> <!--descripcion de receta-->
+                    <a href="{% url 'detalle_receta' receta.id %}" class="btn btn-dark mt-auto">Ver Receta</a> <!--boton que redirige a detalle_receta correspondiente-->
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No hay recetas disponibles</p> <!--si no hay recetas, muestra parrafo-->
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

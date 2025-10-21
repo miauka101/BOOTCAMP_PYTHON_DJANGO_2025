@@ -1,0 +1,77 @@
+/*estilo de base.html*/
+.navbar{
+    background-color: #0400ff7e;
+}
+
+.navbar .nav-link {
+    color: #ffffff;           
+    font-weight: 700;
+    font-size: larger;           
+}
+
+
+body {
+    background-image: url('/static/img/chile-fondo.jpg');
+    background-size: auto; 
+}
+
+footer {
+    background-color: #ff00007e;
+    color: #000000; 
+    font-weight: bold;
+}
+
+
+/*estilo general de jumbotron de base.html*/
+
+.titulo-jumbotron{
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+/*titulos de las recetas*/
+.receta-titulo {
+    background-color: #ffffffb2; 
+    border-radius: 10px;            
+    padding: 20px;   
+    margin-bottom: 10px;
+    text-align: center;          
+}
+   
+
+.ingredientes {
+    background-color: #ffffffb2; 
+    border-radius: 10px;             
+    padding: 20px;
+}
+
+.preparacion {
+    background-color: #ffffffb2; 
+    border-radius: 10px;       
+    padding: 20px;            
+    margin-top: 10px;          
+}
+
+
+
+/*estilo de error-receta*/
+.error-container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.error-container h1 {
+    font-size: 48px;
+}
+
+.error-container p {
+    font-size: 24px;
+}
+
+.error-container a {
+    font-size: 20px;
+    color: black; 
+}
+
