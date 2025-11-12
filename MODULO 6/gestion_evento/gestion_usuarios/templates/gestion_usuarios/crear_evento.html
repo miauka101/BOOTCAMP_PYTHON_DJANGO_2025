@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Crear Evento{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <h2 class="mb-4 text-center">Crear Nuevo Evento</h2>
+                <form method="post">
+
+                    {% csrf_token %}
+                    <!--Nombre -->
+                    <div class="mb-3 row align-items-center">
+                        <label class="col-sm-3 col-form-label">Nombre:</label>
+                        <div class="col-sm-9">
+                            {{ form.nombre }}
+                            {% if form.nombre.errors %}
+                                <div class="text-danger small mt-1">{{ form.nombre.errors }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!--Fecha-->
+                    <div class="mb-3 row align-items-center">
+                        <label class="col-sm-3 col-form-label">Fecha:</label>
+                        <div class="col-sm-9">
+                            {{ form.fecha }}
+                            {% if form.fecha.errors %}
+                                <div class="text-danger small mt-1">{{ form.fecha.errors }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!--Descripción-->
+                    <div class="mb-3 row align-items-center">
+                        <label class="col-sm-3 col-form-label">Descripción:</label>
+                        <div class="col-sm-9">
+                            {{ form.descripcion }}
+                            {% if form.descripcion.errors %}
+                                <div class="text-danger small mt-1">{{ form.descripcion.errors }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{% url 'lista_eventos' %}" class="btn btn-secondary">Volver</a>
+                        <button type="submit" class="btn btn-success">Crear Evento</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
