@@ -1,0 +1,12 @@
+.card-img-top {
+    height: 380px;
+    object-fit: cover;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#modalConfirmacion p {
+    font-size: 1.1rem;
+}

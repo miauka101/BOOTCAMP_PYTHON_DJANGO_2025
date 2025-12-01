@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> 
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Perfil</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Mi Perfil</a>
+            <a href="#">Encontrar Conexiones</a>
+        </nav>
+        <button class="cerrar-sesion">Cerrar Sesión</button>
+    </header>
+
+    <main class="contenedor">
+        <section class="col-izquierda">
+            <div class="card perfil">
+                <div class="portada"></div>
+
+                <div class="contenido-perfil">
+                    <img class="avatar" src="img/black.png" alt="Foto de perfil">
+                    <h2 id="nombre-perfil">Linn Olsen</h2>
+                    <p>Bergen, Noruega</p>
+                    <p>Diseñadora de UX/UI | Desarrolladora Frontend | Amante de la naturaleza</p>
+
+                    <p class="bio">
+                        Apasionada por crear experiencias digitales hermosas y funcionales.
+                        Cuando no está codificando, disfruta explorando los fiordos noruegos y capturando la belleza de la naturaleza en fotografías.
+                    </p>
+                    <a class="edit" href="#" onclick="editarPerfil()">Edit profile</a> 
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Education</h3>
+                <p><strong>Coding Dojo</strong> - Bootcamp de Desarrollo Full Stack</p>
+                <p>Dic 2019 - Mar 2020</p>
+                <p>Triple cinturón negro en Python, MERN y C#</p>
+            </div>
+        </section>
+
+
+        <section class="col-derecha">
+            <div class="card">
+                <h3 id="contador-solicitudes">Solicitudes de Conexión (2)</h3>
+                
+                <div class="solicitud" id="kai-solicitud">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Kai Schröder">
+                    <span>Kai Schröder</span>
+                    <span class="solicitud-acciones">
+                        <i class="fa-solid fa-circle-check fa-lg check-icon" onclick="aceptar('kai-solicitud')"></i>
+                        <i class="fa-solid fa-circle-xmark fa-lg reject-icon" onclick="rechazar('kai-solicitud')"></i>
+                    </span>
+                </div>
+                
+                <div class="solicitud" id="amira-solicitud">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Amira El-Masry">
+                    <span>Amira El-Masry</span>
+                    <span class="solicitud-acciones">
+                         <i class="fa-solid fa-circle-check fa-lg check-icon" onclick="aceptar('amira-solicitud')"></i>
+                        <i class="fa-solid fa-circle-xmark fa-lg reject-icon" onclick="rechazar('amira-solicitud')"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Tus Conexiones (500)</h3>
+                
+                <div class="conexion">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Adrien Desplatz">
+                    <span>Adrien Desplatz</span>
+                </div>
+                <div class="conexion">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Aarav Patel">
+                    <span>Aarav Patel</span>
+                </div>
+                <div class="conexion">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Lina Kovačević">
+                    <span>Lina Kovačević</span>
+                </div>
+                <div class="conexion">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Mateo Hernández">
+                    <span>Mateo Hernández</span>
+                </div>
+                <div class="conexion">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Yuna Kim">
+                    <span>Yuna Kim</span>
+                </div>
+                <div class="conexion">
+                    <img class="solicitud-avatar" src="img/user.png" alt="Liam O'Brien">
+                    <span>Liam O'Brien</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
