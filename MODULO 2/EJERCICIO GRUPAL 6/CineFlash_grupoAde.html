@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlash</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="bg-light">
+
+    <div class="container py-4">
+
+        <h1 class="text-center mb-5">🎬 Bienvenidos a CineFlash</h1>
+
+        <!--peliculas-->
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="img/dune.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dune Parte 2</h5>
+                        <button class="btn btn-primary btn-reservar" data-peli="Duna Parte 2">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="img/oppenheimer.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oppenheimer</h5>
+                        <button class="btn btn-primary btn-reservar" data-peli="Oppenheimer">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="img/barbie.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Barbie</h5>
+                        <button class="btn btn-primary btn-reservar" data-peli="Barbie">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--modal de reserva-->
+    <div class="modal fade" id="modalReserva">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Reserva de Entradas</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="formReserva">
+                        
+                        <label class="form-label">Película</label>
+                        <input type="text" class="form-control mb-2" id="pelicula" readonly>
+
+                        <label class="form-label">Horario</label>
+                        <select class="form-select mb-2" id="horario">
+                            <option value="">Selecciona una hora</option>
+                            <option>12:00</option>
+                            <option>15:00</option>
+                            <option>18:00</option>
+                        </select>
+
+                        <label class="form-label">Cantidad de Asientos</label>
+                        <input type="number" id="cantidad" class="form-control mb-3" min="1" max="10">
+
+                        <h6>Pago (simulado)</h6>
+
+                        <input type="text" id="tarjeta" class="form-control mb-2" placeholder="Número de tarjeta">
+
+                        <input type="text" id="titular" class="form-control mb-2" placeholder="Nombre del titular">
+
+                        <input type="number" id="cvv" class="form-control mb-2" placeholder="CVV" min="100" max="999">
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="btnConfirmar">Confirmar Reserva</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--modal de confrimacion-->
+    <div class="modal fade" id="modalConfirmacion">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">¡Reserva Confirmada con Éxito! </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p id="detalle"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!--js-->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

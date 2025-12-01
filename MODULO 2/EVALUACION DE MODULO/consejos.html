@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos de Seguridad - Ciberseguridad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ciberseguridad</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="amenazas.html">Amenazas Comunes</a></li>
+            <li class="nav-item"><a class="nav-link active" href="consejos.html">Consejos de Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container my-5">
+        <h2 class="mb-4">Consejos para mantenerte seguro en línea</h2>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Usa contraseñas fuertes y únicas para cada cuenta.</li>
+            <li class="list-group-item">Habilita la autenticación en dos pasos.</li>
+            <li class="list-group-item">Mantén tu software y sistemas actualizados.</li>
+            <li class="list-group-item">No abras correos sospechosos ni enlaces desconocidos.</li>
+            <li class="list-group-item">Realiza copias de seguridad regularmente.</li>
+        </ul>
+
+        <!--formulario contacto-->
+        <h3 class="mt-5">Contáctanos para más información</h3>
+        <form id="contactoForm" class="mb-4">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correo" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+     
+     <!--modal test de seguridad -->
+        <button class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#testModal">Realizar Test de Seguridad</button>
+
+        <div class="modal fade" id="testModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Test de Seguridad Básico</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="testForm">
+                <div class="mb-3">
+                    <label>1. ¿Debes usar la misma contraseña en varios sitios?</label><br>
+                    <input type="radio" name="q1" value="sí"> Sí<br>
+                    <input type="radio" name="q1" value="no"> No
+                </div>
+                <div class="mb-3">
+                    <label>2. ¿Es seguro abrir enlaces de correos desconocidos?</label><br>
+                    <input type="radio" name="q2" value="sí"> Sí<br>
+                    <input type="radio" name="q2" value="no"> No
+                </div>
+                <div class="mb-3">
+                    <label>3. ¿Debes mantener tu software actualizado?</label><br>
+                    <input type="radio" name="q3" value="sí"> Sí<br>
+                    <input type="radio" name="q3" value="no"> No
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                </form>
+                <div id="resultadoTest" class="mt-3"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

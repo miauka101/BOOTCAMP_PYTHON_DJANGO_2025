@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+
+.hero {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+section h2, section h3 {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+
+.accordion-body img {
+    max-width: 150px;   
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+
+.modal-body label {
+    font-weight: bold;
+}
+
+#resultadoTest {
+    font-weight: bold;
+    color: green;
+}
+
+
+.accordion-button.active-card {
+    background-color: #0d1dfdc5;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .accordion-body img {
+        max-width: 120px;
+    }
+}

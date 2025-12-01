@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cazuela de Pollo | Recetas Chilenas{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-3 text-center">Cazuela de Pollo</h1>
+    <img src="{% static 'img/logo-cazuela.jpg' %}" class="img-fluid d-block mx-auto mb-4 rounded" alt="Cazuela de Pollo">
+    
+    <div class="ingredientes mb-4">
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>1 pollo entero cortado en presas</li>
+            <li>2 papas grandes</li>
+            <li>1 zanahoria</li>
+            <li>1 trozo de zapallo</li>
+            <li>1 choclo entero</li>
+            <li>Sal y condimentos al gusto</li>
+        </ul>
+    </div>
+
+    <div class="preparacion mb-4">
+        <h3>Preparación:</h3>
+        <ol>
+            <li>Sofreir Polllo trozado con los condimentos y sal , colocar zanahoria, cebolla y choclo trozado, mezclar todo hasta sellar el pollo.</li>
+            <li>Colocar agua ya hervida y cubrir todo.</li>
+            <li>Esperar a que hierva el caldo e ir revolviendo por los proximos 20 minutos.</li>
+            <li>Probar sabor y hechar sal si falta, agregando simultaneamente papas y trozos de zapallos.</li>
+            <li>Ver si esta cocido papas y zapallo luego de 20 minutos.</li>
+            <li>Dejar reposar sopa 10 minutos opcionalmente y servir.</li>
+        </ol>
+    </div>
+
+    <a href="{% url 'index' %}" class="btn btn-secondary">Volver</a>
+</div>
+{% endblock %}

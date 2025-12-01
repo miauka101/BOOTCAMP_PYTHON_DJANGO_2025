@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenazas Comunes - Ciberseguridad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ciberseguridad</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="amenazas.html">Amenazas Comunes</a></li>
+            <li class="nav-item"><a class="nav-link" href="consejos.html">Consejos de Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--lista de amenazas en acordeon-->
+    <section class="container my-5">
+        <h2 class="mb-4">Amenazas Comunes en Internet</h2>
+
+        <div class="accordion" id="amenazasAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="phishingHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#phishingCollapse">
+                Phishing
+              </button>
+            </h2>
+            <div id="phishingCollapse" class="accordion-collapse collapse show" data-bs-parent="#amenazasAccordion">
+              <div class="accordion-body">
+                <img src="img/phishing.jpg" class="img-fluid mb-2" alt="Phishing">
+                 <p>El <strong>Phishing</strong> es un ataque en el que un atacante engaña a la víctima para que entregue información sensible, como contraseñas, datos bancarios o códigos de verificación.</p>
+                    <ul>
+                        <li><strong>Cómo funciona:</strong> Correos, mensajes o llamadas que parecen legítimos para engañar al usuario.</li>
+                        <li><strong>Ejemplos:</strong> Correos de bancos falsos, mensajes de "tu cuenta será suspendida", links que llevan a páginas idénticas a las reales.</li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="ransomwareHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ransomwareCollapse">
+                Ransomware
+              </button>
+            </h2>
+            <div id="ransomwareCollapse" class="accordion-collapse collapse" data-bs-parent="#amenazasAccordion">
+              <div class="accordion-body">
+                <img src="img/ransomware.jpg" class="img-fluid mb-2" alt="Ransomware">
+                <p>El<strong> Ransomware</strong> es un tipo de malware que <strong>secuestra los archivos</strong> del usuario cifrándolos y luego solicita un rescate para devolver el acceso.</p>
+                    <ul>
+                        <li><strong>Cómo funciona:</strong> Archivos adjuntos, descargas o vulnerabilidades que instalan el malware.</li>
+                        <li><strong>Consecuencias:</strong> Pérdida de datos, interrupción de servicios, costos millonarios en recuperación.</li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="malwareHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#malwareCollapse">
+                Malware
+              </button>
+            </h2>
+            <div id="malwareCollapse" class="accordion-collapse collapse" data-bs-parent="#amenazasAccordion">
+              <div class="accordion-body">
+                <img src="img/malware.jpg" class="img-fluid mb-2" alt="Malware">
+                <p><strong>Malware</strong> es cualquier software malicioso diseñado para causar daño o robar información.</p>
+                    <ul>
+                        <li><strong>Tipos:</strong> Virus, troyanos, spyware, adware.</li>
+                        <li><strong>Cómo se propaga:</strong> Descargas inseguras, sitios web maliciosos, dispositivos USB infectados.</li>
+                    </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="ddosHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ddosCollapse">
+                Ataques DDoS
+              </button>
+            </h2>
+            <div id="ddosCollapse" class="accordion-collapse collapse" data-bs-parent="#amenazasAccordion">
+              <div class="accordion-body">
+                <img src="img/ddos.jpg" class="img-fluid mb-2" alt="DDoS">
+                <p>Los<strong> ataques DDoS</strong> buscan colapsar un servidor o servicio enviando enormes cantidades de tráfico desde múltiples dispositivos.</p>
+                    <ul>
+                        <li><strong>Qué provocan:</strong> Sitio web o servicio no funciona, pérdidas económicas, interrupción de operaciones.</li>
+                        <li><strong>Cómo se ejecutan:</strong> Uso de botnets que envían millones de solicitudes simultáneas.</li>
+                    </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
