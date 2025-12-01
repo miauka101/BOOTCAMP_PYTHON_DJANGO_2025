@@ -1,0 +1,15 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+*.vscode/
+*.idea/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
