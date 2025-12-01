@@ -1,0 +1,50 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+
+.hero {
+    height: 80vh;
+    background-image: url('../img/fondo.jpg'); 
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center top; 
+    position: relative;
+    overflow: hidden;           
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+
+.navbar {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+footer {
+    background: #360155;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
