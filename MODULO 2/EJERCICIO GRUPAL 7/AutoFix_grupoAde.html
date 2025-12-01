@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFix - Reparación de Vehículos</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>AutoFix - Reparación de Vehículos a Domicilio</h1>
+    </header>
+
+    <div class="contenedor">
+
+        <!--Servicios disponibles-->
+        <h2>Servicios y Precios</h2>
+
+        <div class="servicios">
+
+            <div class="card">
+                <img src="img/aceite.jpg">
+                <h3>Cambio de aceite</h3>
+                <p class="precio">$500 MXN</p>
+            </div>
+
+            <div class="card">
+                <img src="img/freno.jpg">
+                <h3>Revisión de frenos</h3>
+                <p class="precio">$700 MXN</p>
+            </div>
+
+            <div class="card">
+                <img src="img/electrico.jpg">
+                <h3>Diagnóstico eléctrico</h3>
+                <p class="precio">$600 MXN</p>
+            </div>
+
+        </div>
+
+        <!--Formulario-->
+        <form id="formAutoFix">
+            <h2>Solicitar Reparación</h2>
+
+            <label>Nombre del Cliente</label>
+            <input type="text" id="nombre" required placeholder="Ingresa tu nombre">
+
+            <label>Tipo de Reparación</label>
+            <select id="servicio" required>
+                <option value="">Seleccione un servicio</option>
+                <option value="cambio_aceite">Cambio de aceite</option>
+                <option value="revision_frenos">Revisión de frenos</option>
+                <option value="diagnostico_electrico">Diagnóstico eléctrico</option>
+            </select>
+
+            <label>Descripción del Problema</label>
+            <textarea id="descripcion" rows="4" placeholder="Describe el problema"></textarea>
+
+            <!--Agendamiento-->
+            <label>Agendar Cita</label>
+            <input type="date" id="fecha" required>
+
+            <!--Pago-->
+            <h2>Información de Pago</h2>
+
+            <label>Número de Tarjeta</label>
+            <input type="text" id="tarjeta" maxlength="19" placeholder="**** **** **** 1234" required>
+
+            <label>Nombre del Titular</label>
+            <input type="text" id="titular" required>
+
+            <label>CVV</label>
+            <input type="number" id="cvv" class="form-control mb-2" placeholder="CVV" min="100" max="999">
+
+            <button type="submit">Confirmar Solicitud</button>
+        </form>
+
+        <p id="mensajeExito"></p>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
